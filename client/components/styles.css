@@ -17,9 +17,7 @@ body {
   border: solid;
   border-color: grey;
   border-width: 1px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  border: none;
 }
 
 
@@ -68,7 +66,7 @@ body {
   cursor: pointer;
 }
 
-svg {
+#cart svg {
   width: 3.5%;
   overflow: visible;
 }

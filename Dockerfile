@@ -6,7 +6,7 @@ WORKDIR /src/app
 
 COPY . /src/app
 
-RUN npm install
+RUN npm ci
 
 EXPOSE 3003
 

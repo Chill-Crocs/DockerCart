@@ -1,0 +1,1069 @@
+/****************************** MAIN GRID START ***********************************/
+
+/* #grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-auto-rows: minmax(100px, 100px);
+}
+
+#header {
+  grid-column: 1/3;
+  grid-row: 1;
+  border: solid;
+  border-color: rgba(128, 128, 128, 0.5);
+  border-width: 2px;
+}
+
+#carousel {
+  grid-column: 1;
+  grid-row: 2/8;
+  border: solid;
+  border-color: grey;
+  border-width: 1px;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+#cart {
+  grid-column: 2;
+  grid-row: 2/21;
+  border: solid;
+  border-color: grey;
+  border-width: 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+#reviews {
+  grid-column: 1;
+  grid-row: 8/21;
+  border: solid;
+  border-color: grey;
+  border-width: 1px;
+  border-top: none;
+  border-right: none;
+} */
+
+/******************************** MAIN GRID END ************************************/
+
+/******************************** RATING STYLE START ************************************/
+
+#ratingContainer {
+  line-height: 1.4;
+  margin-top: 40px;
+  margin-left: 2px;
+}
+
+#name, #sales {
+  font-family: -apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-weight: 300;
+  font-stretch: extra-expanded;
+  letter-spacing: .3px;
+}
+
+#sales {
+  font-size: 12px;
+}
+
+#name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#sales:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#sales, #rating {
+  display: inline-flex;
+}
+
+#rating {
+  display: inline-block !important;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#rating:hover {
+  cursor: pointer;
+}
+
+svg {
+  width: 3.5%;
+  overflow: visible;
+}
+
+#divider {
+  font-family:  -apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  letter-spacing: 1px;
+  color: #e1e3df;
+  font-weight: 200;
+}
+
+/******************************** RATING STYLE END ************************************/
+
+/******************************** INFO STYLE START ************************************/
+
+.cart-info {
+  margin-left: 2px;
+}
+
+.tags {
+  display: inline;
+  font-size: 26px;
+  line-height: 35px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.35px;
+}
+
+.tagList {
+  padding-top: 15px;
+}
+
+.price {
+  font-weight: 500;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 26px;
+  line-height: 20px;
+}
+
+.priceStock {
+  display: inline-flex;
+  padding-top: 15px;
+}
+
+.check {
+  text-align: right;
+  margin-right: 25px;
+}
+
+.notCheck {
+  color: red;
+  margin-left: 260px;
+  margin-top: 6px;
+}
+
+/******************************** INFO STYLE END ************************************/
+
+/******************************** SELECTORS STYLE START ************************************/
+
+.selectors {
+  margin-top: 18px;
+  padding-left: 2px;
+}
+
+.optionsName {
+  font-size: 13px;
+  font-family: 'Helvetica', sans-serif;
+  line-height: 28px;
+  font-weight: lighter;
+  position: relative;
+  max-width: 400px;
+  margin-bottom: 6px;
+}
+
+.options, #zipcode-estimator {
+  font-size: 15px;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 300;
+  height: 45px;
+  box-shadow: 0 1px 6px 0 rgba(34, 34, 34, 0.15);
+  padding-left: 10px;
+  padding-right: 34px;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  border-color: rgba(34, 34, 34, 0.15);
+}
+
+.options:hover, #zipcode-estimator:hover {
+  border-color: rgba(34, 34, 34, 0.5);
+  box-shadow: 0 1px 12px 0 rgba(34, 34, 34, 0.2);
+}
+
+.options:focus, #zipcode-estimator:focus {
+  border-color: black;
+  outline: none;
+}
+
+.optionsName select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 24 24%22%3E%3Cpolygon fill%3D%22%23222222%22 points%3D%2216.5 10 12 16 7.5 10 16.5 10%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: 98%;
+  background-size: 23px 23px;
+}
+
+/******************************** SELECTORS STYLE END ************************************/
+
+/******************************** EXTDETAILS STYLE START ************************************/
+
+
+.extDetails-buttons button {
+  margin-top: 11px;
+  border-color: #222;
+  border-radius: 50px;
+  padding: 13px 32px;
+  font-size: 16px;
+  width: 95%;
+  display: block;
+  position: static;
+}
+
+.extDetails-buttons button:focus {
+  outline: 0;
+}
+
+.buyButton, .cartButton {
+  padding-left: 2px;
+  margin-top: 9px;
+}
+
+/* .cartButton {
+  padding-left: 2px;
+  margin-bottom: 9px;
+} */
+
+.buyButton:hover, .cartButton:hover {
+  transform: scaleX(1.015) scaleY(1.035) perspective(1px);
+  z-index: 60;
+}
+
+.cartButton button:hover {
+  background-color: rgba(0, 0, 0, 0.829);
+  cursor: pointer;
+}
+
+.buyButton button:hover {
+  cursor: pointer;
+}
+
+.buyButton button {
+  background-color: white;
+  color: #222;
+}
+
+.cartButton button {
+  background-color: #222;
+  color: white;
+}
+
+.inline-svg-1, .inline-svg-2, .inline-svg-3 {
+  display: inline-flex;
+}
+
+.descriptor {
+  margin-left: 52px;
+  margin-top: 10px;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 13px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  padding-left: 2px;
+}
+
+.descriptor b {
+  font-weight: 500;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.detailsCollapsible, .shippingCollapsible, .descriptionCollapsible, .shippingCostCollapsible, .sellerCollapsible {
+  background-color: rgb(255, 255, 255);
+  border: 0 solid white;
+  outline-style: none;
+  cursor: pointer;
+  margin-top: 11px;
+  border-radius: 50px;
+  padding: 15px 17px;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  width: 103%;
+  display: block;
+  position: static;
+  text-align: left;
+  outline: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 24 24%22 aria-hidden%3D%22true%22 focusable%3D%22false%22%3E%3Cpath fill%3D%22%23222222%22 d%3D%22M12,15.414L7.293,10.707A1,1,0,1,1,8.707,9.293L12,12.586l3.293-3.293a1,1,0,0,1,1.414,1.414Z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: 98%;
+  background-size: 23px 23px;
+  margin-left: -16px;
+  /* transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42); */
+}
+
+.detailsCollapsible:hover, .shippingCollapsible:hover, .descriptionCollapsible:hover, .shippingCostCollapsible:hover, .sellerCollapsible:hover {
+  /* transform: rotate(180deg); */
+  background-color: rgba(204, 204, 204, 0.226);
+  border: rgba(204, 204, 204, 0.226);
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.detailsBox {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 100;
+}
+
+.descriptionContainer {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  font-family: 'Helvetica', sans-serif;
+  letter-spacing: .3px;
+  font-weight: 200;
+  line-height: 23px;
+}
+
+.descriptionButton {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding: 13px 11px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border: 0 solid white;
+  outline-style: none;
+  cursor: pointer;
+  margin-top: 11px;
+  border-radius: 50px;
+  display: block;
+  position: static;
+  outline: none;
+}
+
+.descriptionButton:hover {
+  background-color: rgba(204, 204, 204, 0.226);
+  border: rgba(204, 204, 204, 0.226);
+}
+
+.shaderOff:after {
+  display: none;
+}
+
+.shaderOn:after {
+  opacity: 1;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  transition: opacity 200ms ease-in;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+  pointer-events: none;
+}
+
+.contentHide {
+  max-height: 200px;
+  overflow: hidden;
+};
+
+/******************************** EXTDETAILS STYLE END ************************************/
+
+/******************************** SHIPPING STYLE START ************************************/
+
+#shipping-collapse {
+  margin-top: 5px;
+}
+
+.dotted-shipping {
+  font-size: 12px;
+  font-family: 'Helvetica', sans-serif;
+  letter-spacing: .3px;
+  font-weight: 200;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-underline-position: under;
+  cursor: help;
+}
+
+.arrival {
+  margin-bottom: 9px;
+  color: #595959;
+}
+
+#shipped-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(100px);
+  padding-left: 3px;
+  padding-right: 42px;
+}
+
+#shipped-grid-0-0 {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  cursor: help;
+}
+
+#shipped-grid-0-1{
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  cursor: help;
+}
+
+#shipped-grid-0-2{
+  grid-column: 3;
+  grid-row: 1;
+  display: grid;
+  align-items: right;
+  justify-items: right;
+  cursor: help;
+}
+
+
+#shippedDate {
+  font-family: 'Helvetica', sans-serif;
+  letter-spacing: .3px;
+  font-weight: 200;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.etsy-icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 24px;
+  vertical-align: middle;
+  width: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #EAEAEA;
+}
+
+.icon-dates {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.icon-connector {
+  border-bottom: 2px solid rgba(34, 34, 34, 0.15);
+  height: 50%;
+  width: 100%;
+  display: block;
+  margin-left: 30px;
+  margin-top: -13px;
+}
+
+.icon-connector-2 {
+  border-bottom: 2px solid rgba(34, 34, 34, 0.15);
+  height: 11px;
+  width: 46px;
+  display: block;
+  margin-left: 80px;
+  position: absolute;
+}
+
+.icon-connector-3 {
+  border-bottom: 2px solid rgba(34, 34, 34, 0.15);
+  height: 11px;
+  width: 14px;
+  display: block;
+  margin-left: 30px;
+  position: absolute;
+}
+
+.icon-connector-4 {
+  border-bottom: 2px solid rgba(34, 34, 34, 0.15);
+  height: 11px;
+  width: 7.5%;
+  display: block;
+  position: absolute;
+}
+
+.shippingCostCollapsible {
+  font-size: 12px;
+  font-weight: bold;
+  width: fit-content;
+  text-align: left;
+  padding: 13px 11px;
+  margin-bottom: 1px;
+  margin-left: -11px;
+  background-position: right;
+  padding-right: 22px;
+}
+
+#zipcode-estimator {
+ width: 353px;
+ cursor: text;
+ border-width: 1px;
+ height: 40px;
+}
+
+.area-selector {
+  margin-top: 8px;
+}
+
+#shippingInfo {
+  font-size: 12px;
+  font-family: 'Helvetica', sans-serif;
+  letter-spacing: .3px;
+  font-weight: 200;
+}
+
+#policy-button {
+  font-size: 12px;
+  font-weight: bold;
+  width: 31%;
+  text-align: left;
+  padding: 13px 11px;
+  margin-bottom: 1px;
+  margin-left: -11px;
+  background-color: rgb(255, 255, 255);
+  border: 0 solid white;
+  outline-style: none;
+  cursor: pointer;
+  margin-top: 11px;
+  border-radius: 50px;
+  display: block;
+  position: static;
+  outline: none;
+}
+
+#policy-button:hover {
+  background-color: rgba(204, 204, 204, 0.226);
+  border: rgba(204, 204, 204, 0.226);
+}
+
+.policy-screen-overlay {
+  display: flex;
+  /* overflow-y: auto;
+  overflow-x: hidden; */
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 80;
+  background: rgba(34, 34, 34, 0.65);
+}
+
+.modal-container {
+  box-shadow: 0 6px 36px rgba(34, 34, 34, 0.325);
+  background: #FFF;
+  border-radius: 24px;
+  position: fixed;
+  margin: auto;
+  left: 440px;
+  top: 58px;
+  max-width: 362px;
+  width: 100%;
+  z-index: 10;
+  padding: 30px;
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+/* #modal-close-button {
+  z-index: 200;
+} */
+
+.close-button {
+  position: fixed;
+  top: 64px;
+  left: 872px;
+  border-radius: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.close-button:focus {
+  outline: none;
+}
+
+.etsy-icon-button {
+  display: inline-block;
+  fill: currentColor;
+  height: 50px;
+  vertical-align: middle;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #eaeaea00;
+  color: white;
+}
+
+.etsy-icon-button:hover {
+  background-color: rgba(167, 167, 167, 0.288);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+  /* overflow-y: auto;
+  overflow-x: hidden; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 80;
+  background: rgba(34, 34, 34, 0.65);
+}
+
+.modal-content {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sub-title {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.small-grey-text {
+  font-size: 11px;
+  color: #595959
+}
+
+.modal-content li {
+  margin-left: -26px;
+}
+
+.tooltip-show-0, .tooltip-show-1, .tooltip-show-2, .tooltip-show-3 {
+  position: absolute;
+  margin-top: 84px;
+  margin-left: -114px;
+  border: 1px solid rgba(34, 34, 34, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 6px 36px rgba(34, 34, 34, 0.325);
+  background: #FFFFFF;
+  color: #222222;
+  padding: 12px;
+  width: 262px;
+  font-size: 12px;
+  font-family: 'Helvetica', sans-serif;
+  letter-spacing: .3px;
+  font-weight: 200;
+  z-index: 300;
+}
+
+.tooltip-show-0 {
+  margin-top: -44px;
+  margin-left: 104px;
+}
+
+.tooltip-show-2 {
+  margin-top: 84px;
+  margin-left: -75px;
+}
+
+.tooltip-show-3 {
+  margin-left: -118px;
+}
+
+.tooltip-container {
+  background-color: white;
+}
+
+.tooltip-show-0:before, .tooltip-show-1:before, .tooltip-show-2:before, .tooltip-show-3:before {
+  content:"";
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  top: -16px;
+  left: 128px;
+  border-width: 8px;
+  border-color: transparent white transparent transparent;
+  border-style: solid;
+  transform: rotate(90deg);
+}
+
+.tooltip-show-0:before {
+  top: 19px;
+  left: -16px;
+  transform: rotate(0deg);
+}
+
+.tooltip-show-2:before {
+  left: 129px;
+}
+
+.tooltip-show-3:before {
+  left: 210px;
+}
+
+.payment-content {
+  margin-left: 6px;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.payment-content img {
+  width: 100%;
+}
+
+.policyContainer {
+  display: block;
+  position: relative;
+}
+
+.policyShaderOn:after {
+  opacity: 1;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 62px;
+  position: absolute;
+  transition: opacity 200ms ease-in;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+  pointer-events: none;
+}
+
+.policyShaderOff:after {
+  display: none;
+}
+
+.policyContentHide {
+  max-height: 180px;
+  overflow: hidden;
+};
+
+/******************************** SHIPPING STYLE END ************************************/
+
+/******************************** SVG STYLING START ************************************/
+
+
+#cart-fill {
+  fill: none;
+}
+
+#sand {
+  fill: #9560B8;
+}
+
+#empty {
+  fill: #E6E1F0;
+}
+
+#cart-basket {
+  fill: #D7E6F5
+}
+
+#cart-fill {
+  fill: none;
+}
+
+@keyframes starSparkle {
+  from {fill: rgb(255, 255, 255);}
+  to {fill : #4D6BC6;}
+}
+
+#cart-star1, #cart-star2, #cart-star3 {
+  fill: #4d6bc6;
+}
+
+#cart-star1 {
+  animation: starSparkle 3s ease;
+}
+
+#cart-star2 {
+  animation: starSparkle 3s ease 1s;
+}
+
+#cart-star3 {
+  animation: starSparkle 3s ease 2s;
+}
+
+#wheel-right, #wheel-left {
+  fill: #4D6BC6;
+}
+
+#truck-container {
+  fill: #D7E6F5;
+}
+
+
+/******************************** SVG STYLING END ************************************/
+
+/******************************** SELLER STYLING START ************************************/
+
+.sellerContent img {
+  width: 20%;
+  height: 20%;
+  border-radius: 6px
+}
+
+.seller {
+  font-size: 27px;
+  margin-top: -55px;
+  margin-left: 94px;
+}
+
+.seller-info {
+  font-size: 13px;
+  margin-left: 2px;
+  display: block;
+  margin-top: 5px;
+}
+
+.seller-id {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.seller-id:hover {
+  color: #595959;
+}
+
+.messageModal {
+  position: fixed;
+  top: 321px;
+  left: 855px;
+  background: #FFF;
+  box-shadow: 0 2px 20px rgba(34, 34, 34, 0.15);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.modalSeller {
+  font-size: 16px;
+  margin-top: -40px;
+  margin-left: 58px;
+  font-weight: 100;
+  width: 305px;
+  font-family: Helvetica, sans-serif;
+}
+
+.messageModal img {
+  width: 40px;
+  border-radius: 6px
+}
+
+.messageModal-title {
+  width: 400px;
+  height: 58px;
+  box-shadow: 0 2px 20px rgba(34, 34, 34, 0.15);
+  border-radius: 24px 24px 0 0;
+  padding-left: 12px;
+  padding-top: 14px;
+  padding-bottom: 5px;
+  z-index: 9999;
+}
+
+.title-info {
+  padding-left: 59px;
+  padding-top: 5px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  color:  #595959;
+}
+
+.messageModal-subtitle {
+  height: 200px;
+  width: 410px;
+}
+
+.subtitle-content {
+  font-family: Helvetica , sans-serif;
+  font-weight: 100;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.messageModal-input {
+  width: 400px;
+  height: 58px;
+  box-shadow: 0 2px 20px rgba(34, 34, 34, 0.15);
+  border-radius: 0 0 24px 24px;
+  padding-left: 12px;
+  padding-top: 16px;
+  padding-bottom: 5px;
+  z-index: 9999;
+}
+
+.input-content textarea {
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 16px;
+  resize: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.message-close-button {
+  position: fixed;
+  display: flex;
+  top: 322px;
+  left: 1209px;
+  border-radius: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  z-index: 200;
+}
+
+.etsy-message-icon-button {
+  display: inline-block;
+  height: 50px;
+  vertical-align: middle;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #eaeaea00;
+  color: white;
+}
+
+.etsy-message-icon-button:hover {
+  background-color: rgba(167, 167, 167, 0.288);
+}
+
+#wrapper {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#wrapper button:focus {
+  outline: none;
+}
+
+.white-arrow {
+  transform: rotate(270deg);
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  display: inline-block;
+  fill: currentColor;
+  height: 22px;
+  vertical-align: middle;
+  width: 46px;
+  color: #FFFFFF !important;
+}
+
+.arrow-button {
+  height: 28px;
+  width: 28px;
+  border-radius: 15px;
+  background-color: black;
+  border-color: white;
+  border-width: 0px;
+  position: relative;
+  text-transform: none;
+  margin-right: 12px !important;
+  top: -2px;
+  right: -143px;
+}
+
+.arrow-button:focus {
+  outline: none;
+}
+
+.messagesContainer {
+  max-height: 200px;
+  overflow: auto;
+}
+
+.messagesContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.messageBlurb {
+  width: fit-content;
+  max-width: 66%;
+  border-radius: 6px !important;
+  overflow: hidden;
+  background-color: #EAEAEA;
+  line-height: 24px;
+  padding: 12px;
+  margin-right: 8px;
+}
+
+.messageContent {
+  word-break: break-all !important;
+  word-wrap: break-word !important;
+  text-align: left;
+}
+
+.messageBox {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.message {
+  font-family: Helvetica, sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 16px;
+  color: black;
+}
+
+.sent, .time {
+  font-family: Helvetica, sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 12px;
+  color: black;
+  text-align: right;
+  margin-right: 5px;
+  display: block;
+}
+
+.time {
+  text-align: center;
+  color: #595959;
+  width: 100%;
+}
+
+/******************************** SELLER STYLING END ************************************/
+
+
+/******************************** PRIORITY STYLING END ************************************/
+.cost-info-text {
+  font-size: 12px;
+  font-family: 'Helvetica', sans-serif;
+  letter-spacing: .3px;
+  font-weight: 200;
+  color: #595959;
+  margin-left: 3px;
+  margin-top: 30px;
+}
+
+.cost-info-price {
+  font-family: 'Helvetica', sans-serif;
+  letter-spacing: .3px;
+  font-weight: 200;
+  font-size: 22px;
+  margin-left: 3px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+  /******************************** PRIORITY STYLING END ************************************/

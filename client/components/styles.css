@@ -1,10 +1,14 @@
 /****************************** MAIN GRID START ***********************************/
 
-/* #grid-container {
+body {
+  margin: 0px;
+}
+
+#grid-container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 842px 421px;
   grid-auto-rows: minmax(100px, 100px);
-} */
+}
 
 /* #header {
   grid-column: 1/3;

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://database/croxy-cart', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost/croxy-cart', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const cartSchema = new mongoose.Schema({
   _id: Number,

@@ -6,9 +6,12 @@ class ExtDetails extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      detailsClicked: false,
-      descriptionClicked: false,
-      shippingClicked: false,
+      buttonArrowDet: 'button-arrow-up',
+      buttonArrowDesc: 'button-arrow-up',
+      buttonArrowShip: 'button-arrow-up',
+      detailsClicked: true,
+      descriptionClicked: true,
+      shippingClicked: true,
       descriptionExpand: 'contentHide',
       shader: 'shaderOn',
       expandButtonContent: 'Learn more about this item',
@@ -91,18 +94,33 @@ class ExtDetails extends React.Component {
   }
 
   collapseOnClick(e) {
-    if (e.target.className === 'detailsCollapsible') {
-      let { detailsClicked } = this.state;
+    if (e.target.className === 'detailsCollapsible' || e.target.className === 'details-button-content') {
+      let { buttonArrowDet, detailsClicked } = this.state;
       detailsClicked = !detailsClicked;
-      this.setState({ detailsClicked });
+      if (detailsClicked) {
+        buttonArrowDet = 'button-arrow-up';
+      } else {
+        buttonArrowDet = 'button-arrow-down';
+      }
+      this.setState({ buttonArrowDet, detailsClicked });
     } else if (e.target.className === 'descriptionCollapsible') {
-      let { descriptionClicked } = this.state;
+      let { buttonArrowDesc, descriptionClicked } = this.state;
       descriptionClicked = !descriptionClicked;
-      this.setState({ descriptionClicked });
+      if (descriptionClicked) {
+        buttonArrowDesc = 'button-arrow-up';
+      } else {
+        buttonArrowDesc = 'button-arrow-down';
+      }
+      this.setState({ buttonArrowDesc, descriptionClicked });
     } else if (e.target.className === 'shippingCollapsible') {
-      let { shippingClicked } = this.state;
+      let { buttonArrowShip, shippingClicked } = this.state;
       shippingClicked = !shippingClicked;
-      this.setState({ shippingClicked });
+      if (shippingClicked) {
+        buttonArrowShip = 'button-arrow-up';
+      } else {
+        buttonArrowShip = 'button-arrow-down';
+      }
+      this.setState({ buttonArrowShip, shippingClicked });
     } else if (e.target.className === 'descriptionButton') {
       let { descriptionExpand, shader, expandButtonContent } = this.state;
       if (descriptionExpand === 'contentExpand') {
@@ -121,6 +139,7 @@ class ExtDetails extends React.Component {
   render() {
     const { extDetails } = this.props;
     const { sales, availability } = extDetails;
+    const { buttonArrowDet, buttonArrowDesc, buttonArrowShip } = this.state;
     function getFirstRandDescription() {
       if (!availability) {
         // if (Math.random() > 0.5) {
@@ -261,15 +280,27 @@ class ExtDetails extends React.Component {
             </span>
           </span>
           <button type="button" className="detailsCollapsible" onClick={this.collapseOnClick}>
-            Details
+            <span className="details-button-content">
+              Details
+            </span>
+            <span className={buttonArrowDet}>
+            </span>
           </button>
           {this.getCollapDetails()}
           <button type="button" className="descriptionCollapsible" onClick={this.collapseOnClick}>
-            Description
+            <span className="description-button-content">
+                Description
+            </span>
+            <span className={buttonArrowDesc}>
+            </span>
           </button>
           {this.getCollapDescrip()}
           <button type="button" className="shippingCollapsible" onClick={this.collapseOnClick}>
-            Shipping and Return Policies
+            <span className="shipping-button-content">
+                Shipping and return policies
+            </span>
+            <span className={buttonArrowShip}>
+            </span>
           </button>
           {this.getCollapShipping()}
         </div>

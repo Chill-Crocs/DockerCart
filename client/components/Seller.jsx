@@ -7,7 +7,8 @@ class Seller extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      policyCollap: 'hide',
+      arrowButton: 'button-arrow-up',
+      policyCollap: 'sellerBox',
       messageModal: 'hide',
       message: '',
       messageBox: [],
@@ -44,13 +45,15 @@ class Seller extends React.Component {
   }
 
   collapseOnClick() {
-    let { policyCollap } = this.state;
+    let { policyCollap, arrowButton } = this.state;
     if (policyCollap === 'hide') {
       policyCollap = 'sellerBox';
+      arrowButton = 'button-arrow-up';
     } else {
       policyCollap = 'hide';
+      arrowButton = 'button-arrow-down';
     }
-    this.setState({ policyCollap });
+    this.setState({ arrowButton, policyCollap });
   }
 
   modalOnClick() {
@@ -67,6 +70,7 @@ class Seller extends React.Component {
     const { seller, shopName } = this.props;
     const { name } = seller;
     const {
+      arrowButton,
       policyCollap,
       messageModal,
       message,
@@ -75,7 +79,11 @@ class Seller extends React.Component {
     return (
       <div>
         <button type="button" className="sellerCollapsible" onClick={this.collapseOnClick}>
-          Meet your sellers
+          <span className="seller-button-content">
+            Meet your sellers
+          </span>
+          <span className={arrowButton}>
+          </span>
         </button>
         <div className={policyCollap}>
           <div className="sellerContent">

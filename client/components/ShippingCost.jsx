@@ -5,6 +5,7 @@ class ShippingCost extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      arrowButton: 'button-arrow-up',
       expand: false,
       zipcode: '',
       country: '',
@@ -19,9 +20,14 @@ class ShippingCost extends React.Component {
   }
 
   onExpand() {
-    let { expand } = this.state;
+    let { arrowButton, expand } = this.state;
     expand = !expand;
-    this.setState({ expand });
+    if (expand) {
+      arrowButton = 'button-arrow-down';
+    } else {
+      arrowButton = 'button-arrow-up';
+    }
+    this.setState({ arrowButton, expand });
   }
 
   onFormSubmit(e) {
@@ -341,7 +347,7 @@ class ShippingCost extends React.Component {
 
   render() {
     const {
-      buttonText, costExpand,
+      arrowButton, buttonText, costExpand,
     } = this.state;
 
     const {
@@ -361,7 +367,11 @@ class ShippingCost extends React.Component {
           </div>
         </div>
         <button type="button" className="shippingCostCollapsible" onClick={this.onExpand}>
-          {buttonText}
+            <span className="shippingcost-button-content">
+              {buttonText}
+            </span>
+            <span className={arrowButton}>
+            </span>
         </button>
         {this.getSelector()}
         <span id="shippingInfo">

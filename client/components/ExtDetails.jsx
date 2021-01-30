@@ -30,7 +30,7 @@ class ExtDetails extends React.Component {
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 1 15 15" fill="none" aria-hidden="true" focusable="false">
             <path d="M10.313 10.252l1.86-3.45-1.328-1.32-3.307-3.307a.57.57 0 00-.788 0 .57.57 0 000 .75l3.098 3.57-.533.532-4.425-4.32a.577.577 0 00-.817 0 .577.577 0 000 .795l4.14 4.628-.525.532L3.825 4.83a.555.555 0 00-.825 0 .57.57 0 000 .75l3.6 4.17-.525.532L3 7.68a.578.578 0 00-.75 0 .578.578 0 000 .817l2.775 2.768L9.27 15.51a1.498 1.498 0 002.123 0l3.75-3.713.405-.405a1.5 1.5 0 00.36-1.537L13.5 3.885l-.45.15a.578.578 0 00-.382.487l.3 3.075-2.123 3.188-.532-.533z" fill="#222" />
           </svg>
-          <span className="details-content" style={{ marginLeft: '10px' }}>Handmade Item</span>
+          <span className="details-content" style={{ marginLeft: '20px' }}>Handmade Item</span>
         </div>
       );
     }

@@ -103,7 +103,7 @@ class ExtDetails extends React.Component {
         buttonArrowDet = 'button-arrow-down';
       }
       this.setState({ buttonArrowDet, detailsClicked });
-    } else if (e.target.className === 'descriptionCollapsible') {
+    } else if (e.target.className === 'descriptionCollapsible' || e.target.className === 'description-button-content') {
       let { buttonArrowDesc, descriptionClicked } = this.state;
       descriptionClicked = !descriptionClicked;
       if (descriptionClicked) {
@@ -112,7 +112,7 @@ class ExtDetails extends React.Component {
         buttonArrowDesc = 'button-arrow-down';
       }
       this.setState({ buttonArrowDesc, descriptionClicked });
-    } else if (e.target.className === 'shippingCollapsible') {
+    } else if (e.target.className === 'shippingCollapsible' || e.target.className === 'shipping-button-content') {
       let { buttonArrowShip, shippingClicked } = this.state;
       shippingClicked = !shippingClicked;
       if (shippingClicked) {

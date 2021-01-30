@@ -284,6 +284,7 @@
 .detailsBox {
   font-family: 'Helvetica', sans-serif;
   font-weight: 100;
+  transition: all 0.15s linear;
 }
 
 .descriptionContainer {

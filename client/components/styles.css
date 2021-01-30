@@ -3,7 +3,7 @@
 #grid-container {
   display: grid;
   grid-template-columns: 1fr 853px 427px 1fr;
-  grid-template-rows: repeat(30, 100px) 688px;
+  grid-template-rows: repeat(30, 100px) fit-content(100%);
 }
 
 

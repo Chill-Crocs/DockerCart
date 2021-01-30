@@ -1,10 +1,11 @@
 const express = require('express');
-// const Rating = require('../database/Rating');
+const compression = require('compression');
 const Cart = require('../database/Cart');
 
 const app = express();
 const port = 3003;
 
+app.use(compression());
 app.use(express.static('public'));
 
 app.get('/api/item/:itemID', (req, res) => {
